@@ -11,6 +11,9 @@ const client = new Client({
     port: 5432,
   });
   //REST API------------------------------------------------------
+  app.get("/", async (req,res) => {
+    res.send("Api Testi Basarili...")
+})
   app.get("/dokuman/getAllDocuments", async  (req, res) => {
     let result = {}
     try{
